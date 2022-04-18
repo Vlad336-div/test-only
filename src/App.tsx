@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter} from "react-router-dom";
+import Router from "./router";
+import Logo from "./components/Logo/Logo"
+import styled from "styled-components"
 
-function App() {
+const App = (): JSX.Element => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <WrapApp>
+      <WrapLogo>
+        <Logo/>
+      </WrapLogo>
+      <BrowserRouter>
+        <Router/>
+      </BrowserRouter>
+    </WrapApp>
   );
-}
+};
+
+const WrapApp = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const WrapLogo = styled.div`
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40px;
+`
 
 export default App;

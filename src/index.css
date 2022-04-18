@@ -1,13 +1,40 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*FONTS*/
+@font-face {
+  font-family: 'Helvetica Neue Cyr';
+  src: url('./assets/fonts/HelveticaNeueCyr-Bold.eot');
+  src: url('./assets/fonts/HelveticaNeueCyr-Bold.eot?#iefix') format('embedded-opentype'),
+  url('./assets/fonts/HelveticaNeueCyr-Bold.woff') format('woff'),
+  url('./assets/fonts/HelveticaNeueCyr-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'Helvetica Neue Cyr';
+  src: url('./assets/fonts/HelveticaNeueCyr-Roman.eot');
+  src: url('./assets/fonts/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'),
+  url('./assets/fonts/HelveticaNeueCyr-Roman.woff') format('woff'),
+  url('./assets/fonts/HelveticaNeueCyr-Roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+/*-------------*/
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: 'Helvetica Neue Cyr', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+p {
+  margin: 0;
+}
+
+#root {height: 100%}
